@@ -2,16 +2,6 @@
 
 import { useState } from "react";
 import { useWallet } from "@crossmint/client-sdk-react-ui";
-import { PublicKey } from "@solana/web3.js";
-
-const isSolanaAddressValid = (address: string) => {
-  try {
-    new PublicKey(address);
-    return true;
-  } catch (error) {
-    return false;
-  }
-};
 
 export function TransferFunds() {
   const { wallet } = useWallet();
@@ -29,12 +19,6 @@ export function TransferFunds() {
       amount == null
     ) {
       alert("Transfer: missing required fields");
-      return;
-    }
-
-    // Validate Solana recipient address
-    if (token === "sol" && !isSolanaAddressValid(recipient)) {
-      alert("Transfer: Invalid Solana recipient address");
       return;
     }
 

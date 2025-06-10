@@ -4,16 +4,16 @@ import { useAuth, useWallet } from "@crossmint/client-sdk-react-ui";
 import Image from "next/image";
 import { WalletBalance } from "@/components/balance";
 import { TransferFunds } from "@/components/transfer";
-import { Permissions } from "@/components/permissions";
+import { Permissions } from "@/components/delegated-signers";
 import { LogoutButton } from "@/components/logout";
 import { LoginButton } from "@/components/login";
 
 export function HomeContent() {
   const { wallet, status: walletStatus } = useWallet();
-  const { status, status: authStatus } = useAuth();
+  const { status: authStatus } = useAuth();
 
   const walletAddress = wallet?.address;
-  const isLoggedIn = wallet != null && status === "logged-in";
+  const isLoggedIn = wallet != null && authStatus === "logged-in";
   const isLoading =
     walletStatus === "in-progress" || authStatus === "initializing";
 

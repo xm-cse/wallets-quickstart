@@ -22,14 +22,14 @@ export function WalletBalance() {
     fetchBalances();
   }, [wallet]);
 
-  const formatBalance = (balance: string, decimals: number) => {
-    return (Number(balance) / Math.pow(10, decimals)).toFixed(2);
+  const formatBalance = (balance: string) => {
+    return Number(balance).toFixed(2);
   };
 
   const solBalance =
-    balances?.find((t) => t.token === "sol")?.balances.total || "0";
+    balances?.find((t) => t.token === "sol")?.amount || "0";
   const usdcBalance =
-    balances?.find((t) => t.token === "usdc")?.balances.total || "0";
+    balances?.find((t) => t.token === "usdc")?.amount || "0";
 
   return (
     <div className="flex flex-col gap-2">
@@ -39,7 +39,7 @@ export function WalletBalance() {
           <p className="font-medium">Solana</p>
         </div>
         <div className="text-gray-700 font-medium">
-          {formatBalance(solBalance, 9)} SOL
+          {formatBalance(solBalance)} SOL
         </div>
       </div>
       <div className="border-t my-1"></div>
@@ -49,7 +49,7 @@ export function WalletBalance() {
           <p className="font-medium">USDC</p>
         </div>
         <div className="text-gray-700 font-medium">
-          $ {formatBalance(usdcBalance, 6)}
+          $ {formatBalance(usdcBalance)}
         </div>
       </div>
       <div className="flex flex-col gap-2 mt-2">

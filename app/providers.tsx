@@ -4,7 +4,6 @@ import {
   CrossmintProvider,
   CrossmintAuthProvider,
   CrossmintWalletProvider,
-  useAuth,
 } from "@crossmint/client-sdk-react-ui";
 
 if (!process.env.NEXT_PUBLIC_CROSSMINT_API_KEY) {
@@ -18,28 +17,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
         authModalTitle="Wallets Quickstart"
         loginMethods={["google", "email"]}
       >
-        <WalletProvider>
+        <CrossmintWalletProvider
+          createOnLogin={{
+            chain: "solana",
+            signer: {
+              type: "email",
+            }
+          }}
+        >
           {children}
-        </WalletProvider>
+        </CrossmintWalletProvider>
       </CrossmintAuthProvider>
     </CrossmintProvider>
-  );
-}
-
-export function WalletProvider({ children }: { children: React.ReactNode }) {
-  const { user } = useAuth();
-
-  return (
-    <CrossmintWalletProvider
-      createOnLogin={{
-        chain: "solana",
-        signer: {
-          type: "email",
-          email: user?.email,
-        },
-      }}
-    >
-      {children}
-    </CrossmintWalletProvider>
   );
 }
