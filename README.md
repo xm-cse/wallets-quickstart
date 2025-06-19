@@ -12,7 +12,6 @@
 
 <br>
 <br>
-<img src="https://github.com/user-attachments/assets/76a983ab-499e-4d12-af7a-0ae17cb0b6cd" alt="Image" width="full">
 </div>
 
 ## Introduction
