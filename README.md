@@ -7,7 +7,7 @@
 <h1>Wallets Quickstart</h1>
 
 <div align="center">
-<a href="https://wallets.demos-crossmint.com/">Live Demo</a> | <a href="https://docs.crossmint.com/introduction/platform/wallets">Docs</a> | <a href="https://github.com/crossmint">See all quickstarts</a>
+<a href="https://wallets.demos-crossmint.com/">Live Demo</a> | <a href="https://docs.crossmint.com/introduction/platform/wallets">Docs</a> | <a href="https://www.crossmint.com/quickstarts">See all quickstarts</a>
 </div>
 
 <br>
@@ -19,9 +19,9 @@ Create and interact with Crossmint wallets. This quickstart uses Crossmint Auth 
 
 **Learn how to:**
 - Create a wallet
-- View its balance for SOL and SPL tokens
-- Send USDC or SOL to another wallet
-- Add permissions to allow third parties to sign transactions on behalf of your wallet
+- View its balance for USDXM (USDXM is a test stablecoin by Crossmint) and native tokens
+- View wallet transaction activity
+- Send USDXM or native tokens to another wallet
 
 ## Deploy
 Easily deploy the template to Vercel with the button below. You will need to set the required environment variables in the Vercel dashboard.
