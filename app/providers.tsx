@@ -23,6 +23,18 @@ export function Providers({ children }: { children: React.ReactNode }) {
         authModalTitle="Welcome"
         loginMethods={["google", "email"]}
         appearance={customAppearance}
+        termsOfServiceText={
+          <p>
+            By continuing, you accept the{" "}
+            <a
+              href="https://www.crossmint.com/legal/terms-of-service"
+              target="_blank"
+            >
+              Wallet's Terms of Service
+            </a>
+            , and to recieve marketing communications from Crossmint.
+          </p>
+        }
       >
         <CrossmintWalletProvider
           appearance={customAppearance}

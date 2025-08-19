@@ -13,7 +13,7 @@ const features = [
   {
     title: "Scale Big",
     description:
-      "All the APIs you need to power onramping, activity tracking, staking, debit cards and more. Built to grow with you.",
+      "All the APIs you need to power onramping, activity tracking, staking and more. Built to grow with you.",
     iconPath: "/trending-up.svg",
   },
   {
