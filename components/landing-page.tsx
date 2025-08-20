@@ -17,7 +17,7 @@ const features = [
     iconPath: "/trending-up.svg",
   },
   {
-    title: "Stay Unlocked",
+    title: "Protect Your Assets",
     description:
       "Smart wallets with onchain 2FA, flexible recovery methods, and no vendor lock-in. Secure and ready for what’s next.",
     iconPath: "/shield-check.svg",
