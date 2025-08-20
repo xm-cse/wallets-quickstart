@@ -63,7 +63,7 @@ export function LandingPage({ isLoading }: { isLoading: boolean }) {
               Get started with the Crossmint Wallets Quickstart.{" "}
               <a
                 href="https://github.com/crossmint/wallets-quickstart"
-                className="text-white"
+                style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
