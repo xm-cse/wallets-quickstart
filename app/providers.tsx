@@ -10,6 +10,8 @@ if (!process.env.NEXT_PUBLIC_CROSSMINT_API_KEY) {
   throw new Error("NEXT_PUBLIC_CROSSMINT_API_KEY is not set");
 }
 
+const chain = (process.env.NEXT_PUBLIC_CHAIN ?? "solana") as any;
+
 const customAppearance = {
   colors: {
     accent: "#020617",
@@ -39,7 +41,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <CrossmintWalletProvider
           appearance={customAppearance}
           createOnLogin={{
-            chain: "solana",
+            chain: chain,
             signer: {
               type: "email",
             },
