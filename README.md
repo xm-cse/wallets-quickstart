@@ -53,12 +53,12 @@ cp .env.template .env
 4. Get a Crossmint client API key from [here](https://docs.crossmint.com/introduction/platform/api-keys/client-side) and add it to the `.env` file. Make sure your API key has the following scopes: `users.create`, `users.read`, `wallets.read`, `wallets.create`, `wallets:transactions.create`, `wallets:transactions.sign`, `wallets:balance.read`, `wallets.fund`.
 ```bash
 NEXT_PUBLIC_CROSSMINT_API_KEY=your_api_key
-NEXT_PUBLIC_CHAIN=solana
+
+# Check all supported chains: https://docs.crossmint.com/introduction/supported-chains
+NEXT_PUBLIC_CHAIN=your_chain
 ```
 
-5. (Optional) Set your preferred blockchain by updating `NEXT_PUBLIC_CHAIN` in the `.env` file. Supported values: `solana`, `stellar`, or any EVM chain like `optimism-sepolia`.
-
-6. Run the development server:
+5. Run the development server:
 ```bash
 npm run dev
 # or
