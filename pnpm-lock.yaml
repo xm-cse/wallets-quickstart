@@ -11,6 +11,18 @@ importers:
       '@crossmint/client-sdk-react-ui':
         specifier: 2.4.13
         version: 2.4.13(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@types/react@19.1.1)(babel-plugin-macros@3.1.0)(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.1.0(react@19.1.0))(react-native@0.74.0(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(@types/react@19.1.1)(bufferutil@4.0.9)(react@19.1.0)(utf-8-validate@5.0.10))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)
+      '@crossmint/client-sdk-window':
+        specifier: ^1.0.3
+        version: 1.0.3
+      '@crossmint/client-signers':
+        specifier: ^0.0.20
+        version: 0.0.20
+      '@crossmint/common-sdk-base':
+        specifier: ^0.9.5
+        version: 0.9.5(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
+      '@crossmint/wallets-sdk':
+        specifier: ^0.14.0
+        version: 0.14.0(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)(zod@3.22.4)
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(next@15.2.4(@babel/core@7.26.10)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -1110,6 +1122,7 @@ packages:
 
   '@hey-api/client-fetch@0.8.1':
     resolution: {integrity: sha512-AaVNVLBl7N9Fun7QDnb00YDubAFjB9ICi5U6kmzcJSnnQTQGRMsuBBRupQV5ERdMMFt71zjSDym7Z+gLVe8m3A==}
+    deprecated: Starting with v0.73.0, this package is bundled directly inside @hey-api/openapi-ts.
 
   '@hpke/chacha20poly1305@1.6.2':
     resolution: {integrity: sha512-LAzcHlX+GfrVqwjx+EqqHmEdkzE5YYIlzZz4Q1uN2Keq81iOB9IveJpufhsbyB1zw7W5/Y4gJ6dfAZq4gFO/sA==}
