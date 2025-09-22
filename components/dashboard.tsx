@@ -6,6 +6,7 @@ import { Activity } from "./activity";
 import { Footer } from "./footer";
 import { LogoutButton } from "./logout";
 import { WalletBalance } from "./balance";
+import { SignMessage } from "@/components/sign-message";
 
 export function Dashboard() {
   const { wallet } = useWallet();
@@ -50,7 +51,7 @@ export function Dashboard() {
           </div>
 
           {/* Main Dashboard Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* USDXM Balance & Wallet Details Column */}
             <div className="flex flex-col gap-6">
               {/* USDXM Balance Section */}
@@ -119,6 +120,7 @@ export function Dashboard() {
             </div>
             <TransferFunds />
             <Activity />
+            <SignMessage />
           </div>
         </div>
       </div>

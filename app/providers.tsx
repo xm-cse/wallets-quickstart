@@ -1,5 +1,6 @@
 "use client";
 
+import { FlowWalletProvider } from "@/providers/FlowWalletProvider";
 import {
   CrossmintProvider,
   CrossmintAuthProvider,
@@ -47,7 +48,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
             },
           }}
         >
-          {children}
+          <FlowWalletProvider>{children}</FlowWalletProvider>
         </CrossmintWalletProvider>
       </CrossmintAuthProvider>
     </CrossmintProvider>

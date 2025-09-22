@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "2.4.13",
+    "@crossmint/client-sdk-window": "^1.0.3",
+    "@crossmint/client-signers": "^0.0.20",
+    "@crossmint/common-sdk-base": "^0.9.5",
+    "@crossmint/wallets-sdk": "^0.14.0",
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
     "next": "15.2.4",
