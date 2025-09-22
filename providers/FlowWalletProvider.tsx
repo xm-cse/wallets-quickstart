@@ -34,7 +34,7 @@ interface FlowWalletProviderProps {
 
 export function FlowWalletProvider({ children }: FlowWalletProviderProps) {
   const { crossmint } = useCrossmint();
-  const { onAuthRequired, wallet } = useWallet();
+  const { onAuthRequired, clientTEEConnection, wallet } = useWallet();
 
   // Store the current signer instance
   const currentSignerRef = useRef<FlowNonCustodialSigner | null>(null);
@@ -60,6 +60,7 @@ export function FlowWalletProvider({ children }: FlowWalletProviderProps) {
               address: wallet.address,
               crossmint,
               onAuthRequired,
+              clientTEEConnection: clientTEEConnection?.(),
             }
           : {
               type: "phone",
@@ -68,11 +69,12 @@ export function FlowWalletProvider({ children }: FlowWalletProviderProps) {
               address: wallet.address,
               crossmint,
               onAuthRequired,
+              clientTEEConnection: clientTEEConnection?.(),
             };
 
       currentSignerRef.current = new FlowNonCustodialSigner(config);
     }
-  }, [onAuthRequired, wallet, crossmint]);
+  }, [onAuthRequired, wallet, crossmint, clientTEEConnection]);
 
   const signRaw = async (message: string): Promise<{ signature: string }> => {
     if (!currentSignerRef.current) {
