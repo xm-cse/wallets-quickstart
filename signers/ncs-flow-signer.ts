@@ -23,8 +23,9 @@ export class FlowNonCustodialSigner {
   constructor(
     private config: EmailInternalSignerConfig | PhoneInternalSignerConfig
   ) {
-    this.initialize();
     this.type = config.type;
+    this.config.clientTEEConnection = config.clientTEEConnection;
+    this.initialize();
   }
 
   private async initialize() {
